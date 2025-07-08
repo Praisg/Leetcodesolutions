@@ -1,0 +1,22 @@
+                return
+                result.append(sol[:])
+        def backtrack(i):
+            if i == n: # outof bound we get the base case
+        n = len(nums)
+        result , sol = [], []
+
+
+        #the next element hence i+1 thus skipping, else we use it and append sol.nums[i], 
+        #backtrack(i+1) once we use i, sol.pop() undo our decision before going back to next
+        #recursive backtrack, start at 0 ,if i== n we are goin to app the sol set to results, if not we backtrack/
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+class Solution:
+            #situation where we skip the num
+            backtrack(i+1)
+            #situation where we process the num
+            sol.append(nums[i])
+            backtrack(i+1)
+            sol.pop()
+
+        backtrack(0)
+        return result    
