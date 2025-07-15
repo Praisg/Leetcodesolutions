@@ -1,0 +1,11 @@
+class Solution:
+    def checkRecord(self, s: str) -> bool:
+        count = 0
+        for i in s:
+            if i == "A":
+                count += 1
+        if 'LLL' in s or count >= 2:
+            return False
+        else:
+            return True        
+        
