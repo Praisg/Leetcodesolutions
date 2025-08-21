@@ -1,0 +1,26 @@
+        return maxP if maxP > float("-inf") else 0  """
+
+        minPrice = float('inf')
+        maxP = 0
+
+        for price in prices:
+                    maxP = max(profit, maxP)
+                if profit > 0:
+
+                profit = prices[j]-prices[i]
+            for j in range(i+1, len(prices)):
+        for i in range(len(prices)):
+        maxP = float("-inf")
+        """brute force use 2 for loops "
+        """
+            if price < minPrice:
+                minPrice = price
+
+·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌profit·‌=·‌price·‌-·‌minPrice
+·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌if·‌profit·‌>·‌maxP:
+·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌maxP·‌=·‌profit
+        return maxP                             
+        :rtype: int
+        :type prices: List[int]
+        """
+    def maxProfit(self, prices):
