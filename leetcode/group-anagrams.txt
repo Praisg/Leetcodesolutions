@@ -1,0 +1,13 @@
+            count[v].append(i)
+            v = "".join(sorted(i))
+        for i in strs:
+
+        count = defaultdict(list)
+        
+in that dictionary and append"
+        "start by sorting a word and use it as a key in a dictionary, then check the len and word too 
+        return list(count.values())  
+                
+
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+class Solution:
