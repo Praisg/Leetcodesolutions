@@ -1,0 +1,14 @@
+class Solution:
+    def pivotIndex(self, nums: List[int]) -> int:
+        """so we know that totalSum = prefix(:pivot)+ arr(pivot)+ sufix(pivot:1-n)
+        if suffix == pivot we return pivot index
+        """
+        n = len(nums)
+        for pivot in range(n):
+            suffix = total -prefix-nums[pivot]
+        prefix = 0
+        total = sum(nums)
+            if suffix == prefix:
+                return pivot
+            prefix += nums[pivot]
+        return -1    
