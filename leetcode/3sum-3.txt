@@ -1,0 +1,29 @@
+                sum = nums[i] + nums[l] + nums[r]
+            while l < r:
+            l, r = i+1, len(nums)-1
+
+                continue
+            if i > 0 and nums[i] == nums[i-1]:
+                break
+            if nums[i] > 0:
+        for i in range(len(nums)-2): # to cater for the 2 pointers
+        
+            return triplets
+        if len(nums)< 3:
+                if sum == 0:
+                    triplets.append([nums[i],nums[l],nums[r]])
+                    l += 1
+
+        nums.sort()
+                    r -= 1
+                    while l < r and nums[l] == nums[l-1]:
+                        l += 1
+                    while l < r and nums[r] == nums[r+1]:
+                        r -= 1
+                elif sum > 0:
+                    r -= 1
+                else:
+                    l += 1
+        return triplets                            
+        triplets = []
+
