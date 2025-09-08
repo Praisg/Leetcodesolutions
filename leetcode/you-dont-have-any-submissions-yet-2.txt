@@ -1,0 +1,6 @@
+1
+class Solution:
+2
+    def majorityElement(self, nums: List[int]) -> List[int]:
+3
+        
