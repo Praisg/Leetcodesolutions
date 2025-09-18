@@ -1,0 +1,23 @@
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        """iterate thru using a sliding window, i = 0 , r keeps going using a for loop,
+        take note of the longest = 0 , get max of long and window lenght = r-l + 1 accounting for 
+first letter. to avoid dublicates use a set
+        """
+        char_index = {}
+        max_length = 0
+        start = 0
+        for end in range(len(s)):
+            if s[end] in char_index and char_index[s[end]] >= start:
+        
+
+        if s[r] is in the set we want to remove s[i] from the set and start at i+ 1
+        add to set if not in set
+                start = char_index[s[end]] + 1
+            else:
+                max_length = max(max_length, end - start + 1)
+            char_index[s[end]] = end
+    
+        return max_length
+
+
