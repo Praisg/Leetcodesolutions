@@ -1,0 +1,26 @@
+        for i in range (k):
+
+            curr_sum += nums[i]
+        av_sum = curr_sum/k
+
+        for r in range(k, n):
+            curr_sum += nums[r]
+            curr_sum -= nums[r-k]
+            av = curr_sum/k
+            av_sum = max(av_sum, av)    
+        return av_sum    
+
+           
+
+
+
+        curr_sum = 0
+        n = len(nums)
+        """
+        then when we move up we want a winod w of k so subtract curr -= nums[i-k]
+        so  we actually want nums[i] to add up and divide by 4
+        build another window from k to n now 
+        build a window with elements up to k, cakculate averge sum of the first 4 elements
+        """
+    def findMaxAverage(self, nums: List[int], k: int) -> float:
+class Solution:
