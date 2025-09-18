@@ -1,0 +1,16 @@
+class Solution:
+    def findMaxAverage(self, nums: List[int], k: int) -> float:
+
+        sliderSum = sum(nums[:k])
+        maxSum = sliderSum
+
+
+
+        for i in range(k, len(nums)):
+            sliderSum = sliderSum - nums[i-k] + nums[i]
+            if sliderSum > maxSum:
+                maxSum = sliderSum
+        return maxSum/k        
+           
+
+
