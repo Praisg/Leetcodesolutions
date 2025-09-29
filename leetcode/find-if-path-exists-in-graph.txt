@@ -1,0 +1,16 @@
+class Solution:
+    def validPath(self, n: int, edges: List[List[int]], source: int, destination: int) -> bool:
+        #we can do like depth first search, if nei node = source return true else we continue. Then False
+        #dfs, 
+        d = defaultdict(list)
+        for u,v in edges:
+            d[u].append(v)
+   
+        seen = set()
+        seen.add(source)
+        stack = [source]
+
+        while stack:
+            node = stack.pop()
+
+            d[v].append(u)
