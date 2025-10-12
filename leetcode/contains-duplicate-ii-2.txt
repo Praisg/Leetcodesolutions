@@ -1,0 +1,20 @@
+class Solution:
+    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+        #iterate keep track of index and num, if num in hashmap and abs(i-j)<= k then 
+return true
+        """
+        hmap= {}
+        [1,2,3,4,1] , k = 2
+         
+        """
+        hmap= {}
+        
+         1 -> hmap{1:0, 2:1, 3:2, 4:3,}
+         yes abs(hmap[i]-index) <=k
+         return true else return false
+        for index, num in enumerate(nums):
+            if num in hmap and abs(hmap[num]-index)<=k:
+                return True
+            hmap[num]= index
+        return False            
+
