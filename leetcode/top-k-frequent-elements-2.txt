@@ -1,0 +1,24 @@
+        heap = []
+
+        for u, v in counter.items():
+            heapq.heappush(heap, (-v,u))
+        
+        answer = []
+        for i in range(k):
+            freq, num = heapq.heappop(heap)
+            answer.append(num)
+
+        return answer
+        counter = Counter(nums)
+
+        """
+                             in rnage k we pop into answer
+                             heap.heapfy(heap)
+                             heap.append(-v,i)
+        heapify using for i, v in counter.items():
+        heap = []
+        counter : {1:4, 2:3, 3:5, 4: 1 , 5: 1}
+        [1,1,1,1,2,2,2,3,3,3,3,3,4,5] k = 3
+        """
+factor and then pop out in the range K
+        #Counter which has key element: val freq, implement a max heap using the freq as the determinig 
