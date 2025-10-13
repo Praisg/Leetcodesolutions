@@ -1,0 +1,28 @@
+0 it means they are different hence not anagrams
+        """
+         anagram 
+         nagaram
+        count = [ 0, 1, 0, 0...]
+        ord(n)- ord(a) = index 13 -> increase its value
+
+        for t 
+        count at index 13 <- decrease its value 
+        so if count[ord(n)-ord(a)]< 0 
+        it means they are different letters because we are decrementing -1
+        rat.      cat
+        1 1 1    -1 0 0
+       so if count[ord(ch)-ord(a)]< 0
+       return False
+        """
+        if len(s) != len(t):
+            return False
+        count = [0]*26
+
+        for ch in s:
+            count[ord(ch)-ord('a')] += 1
+
+        for ch in t:
+            count[ord(ch)-ord('a')] -= 1
+            if count[ord(ch)-ord('a')] < 0:
+                return False
+        return True            
