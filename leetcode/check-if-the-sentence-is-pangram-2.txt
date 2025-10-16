@@ -1,0 +1,17 @@
+class Solution:
+    def checkIfPangram(self, sentence: str) -> bool:
+        """
+        
+        count = ord(ch) - ord(a) = gives a certain position under 26  
+        as we iterate we +=1 
+        we check if < 0 
+        """
+        count= [0]*26
+
+        for ch in sentence:
+            count[ord(ch)-ord("a")] += 1
+            
+        if 0 in count:
+            return False
+        return True        
+        
