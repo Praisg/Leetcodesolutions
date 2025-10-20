@@ -1,0 +1,20 @@
+        # return max(dp)  
+        """
+        binary search solution:
+        we look over and build our array as we go
+        [10] if 9 is less than num in sub array we are creating we put it on the left side by using 
+bisect_left (this is O(logn) because under the hood its a C library which also use _lt_ and not _eq_)
+        if the bisect left position is == len(sub) it means we have to append and not add on left
+        
+        """
+
+        subarray = []
+        for num in nums:
+            indx = bisect_left(subarray, num)
+
+            if indx == len(subarray):
+                subarray.append(num)
+            else:
+                subarray[indx] = num #basically replacing the number which was there and which was 
+greater              
+        return len(subarray)
