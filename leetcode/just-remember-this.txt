@@ -1,0 +1,19 @@
+        minAb = float("inf")
+        for i in range(1, n):
+            Ab = abs(arr[i]-arr[i-1])
+            minAb = min(minAb, Ab)
+
+
+        for i in range(1, n):
+            if arr[i] - arr[i-1] == minAb:
+ 
+        res = []
+                res.append([arr[i-1], arr[i]])
+        return res
+
+        n = len(arr)
+        arr.sort()
+        """
+        NB sort first because the min can be easily located between adjacent elements
+        get min abs diff, get the pairs
+        """
