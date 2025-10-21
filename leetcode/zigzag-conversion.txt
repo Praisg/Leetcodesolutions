@@ -1,0 +1,26 @@
+        if numRows == 1:
+         after everything we join the strings
+        """
+        we have a direction which we will start as 1 so as we hit the last point 
+we      change direction to -1 so that we move up
+         [        ] i = 1
+         [        ]. ] i = 2
+         [        ] i = 0
+        we can have a matrix m= [
+            return s
+        i = 0
+        d = 1
+
+        M = [[]for _ in range(numRows)]
+
+        for ch in s:
+            M[i].append(ch)
+            if i == 0:
+                d = 1
+            if i == numRows-1:
+                d = -1
+            i += d
+        res =''
+        for i in range(numRows):
+            res += "".join(M[i]) 
+        return res               
