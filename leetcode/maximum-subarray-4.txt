@@ -1,0 +1,21 @@
+        [-2, 1,-3,4,-1,2,1,-5,4]
+        max = -inf
+        max = -2
+        but if curSum < 0: set curSum = 0
+        continue adding
+use prefix sum..
+        """
+        n = len(nums)
+        CurSum = [0]*n
+        CurSum[0] = nums[0]
+
+        for i in range(1, n):
+            CurSum[i] = CurSum[i-1] + nums[i]
+            if CurSum[i] < 0:
+                CurSum[i] = 0
+
+sum to 0
+        here the idea is to build our max sum, if we have a negative sum we restart 
+        """
+    def maxSubArray(self, nums: List[int]) -> int:
+class Solution:
