@@ -1,0 +1,17 @@
+
+        """
+        optimum code : using prefix_sum, them use from r to l-1 to access the stuff
+        """
+        n = len(words)
+        result = []
+        vowels = set('aeiou')
+        prefixSum = [0] * (n+1)
+
+        for i in range(n):
+            prefixSum[i+1] = prefixSum[i] #carry previous total
+            if words[i] and words[i][0] in vowels and words[i][-1] in vowels:
+                prefixSum[i + 1] += 1
+
+        for l, r in queries:
+                result.append(prefixSum[r+1]-prefixSum[l])    
+        return result 
