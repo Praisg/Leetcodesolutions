@@ -1,0 +1,23 @@
+        # for i in range(n):
+        #     for j in range(i+1, n):
+        #         var = prices[j] - prices[i]
+
+        #         maxProfit = max(maxProfit, var)
+        # return maxProfit       
+        
+        maxProfit = 0
+        minPrice = float("inf")
+
+        for price in prices:
+            if price < minPrice:
+                minPrice = price
+
+            profit = price - minPrice
+            maxProfit = max(maxProfit, profit)
+        return maxProfit        
+
+        
+        # n = len(prices)
+        # maxProfit= 0
+        """ 
+        what we want to do is iterate thru using 2 for loops and 
