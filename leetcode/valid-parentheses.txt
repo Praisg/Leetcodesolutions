@@ -1,0 +1,23 @@
+            "}":"{",
+            "]":"["       
+               }
+        stack = []
+
+        for char in s:
+            if char not in hmap:
+                stack.append(char)
+            else:
+                if stack:
+                    popped = stack.pop()
+                    if popped != hmap[char]:
+                        return False
+                else:
+                    return False 
+        return not stack            
+            ")":"(",
+        hmap = {
+
+
+
+    def isValid(self, s: str) -> bool:
+class Solution:
