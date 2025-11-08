@@ -1,0 +1,24 @@
+        subset = []
+
+        def dfs(i):
+            if i >= len(nums):
+                result.append(subset[:])
+        result = []
+
+               """
+               return result
+               so we are going to start at index 0
+                return
+
+            #choose the decision
+            dfs(i+1)
+            subset.append(nums[i])
+            
+
+            #not choose
+            dfs(i+1)
+            subset.pop()
+            
+
+        dfs(0)
+        return result        
