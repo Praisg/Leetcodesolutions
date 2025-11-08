@@ -1,0 +1,25 @@
+
+        subset = []
+        result = []
+        candidates.sort() #sort to get the numbers amd later skip dublicates using j += 1
+        def dfs(i):
+            if sum(subset) == target:
+                result.append(subset[:])
+                return
+            if i == len(candidates) or sum(subset) > target:
+                return
+class Solution:
+    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+
+            #taking curr element once
+            subset.append(candidates[i])
+            dfs(i+1)
+            subset.pop()
+
+            j = i + 1
+            while j < len(candidates) and candidates[i] == candidates[j]:
+                j += 1
+            dfs(j)
+
+        dfs(0)
+        return result            
