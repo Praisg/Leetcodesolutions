@@ -1,0 +1,22 @@
+        result = []
+
+        subset = []
+        def dfs(i):
+            if i == len(candidates) or sum(subset)> target:
+                return
+            if  sum(subset) == target:
+                result.append(subset[:])
+                return
+            dfs(1+i)
+            dfs(i)
+
+            subset.append(candidates[i])
+
+            subset.pop()
+            
+        dfs(0)
+        return result          
+        """
+
+        if reach a base case we return
+cpmbination total > target we return
