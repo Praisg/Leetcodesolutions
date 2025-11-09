@@ -1,0 +1,23 @@
+                result.append("".join(solution))
+                return
+
+            #build the left decision where we add the open
+            if oppen < n:
+                solution.append("(")
+                backtrack(oppen+1, closse)
+            if len(solution) == 2*n:
+                solution.pop()
+
+            #build the right decision where we add the close
+            if oppen>closse:
+                solution.append(")")
+        def backtrack(oppen, closse):
+                backtrack(oppen, closse+1)
+                solution.pop()
+
+        backtrack(0,0)
+        print(result)
+        return result             
+
+        solution = [] # we are going to do a join when adding to the result
+        result = []
