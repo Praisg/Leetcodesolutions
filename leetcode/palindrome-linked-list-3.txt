@@ -1,0 +1,32 @@
+        lets find the middle part reverse the right side and then compare it to the left side using the while 
+right side thing..
+        """
+        if not head or not head.next:
+            return True
+
+        slow = fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+
+        curr = slow
+        prev = None
+        while curr:
+            temp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = temp
+
+        left = head
+        right = prev
+
+        while right:
+            if left.val != right.val:
+                return False
+            left = left.next
+        """
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+class Solution:
+#         self.next = next
+#         self.val = val
+#     def __init__(self, val=0, next=None):
