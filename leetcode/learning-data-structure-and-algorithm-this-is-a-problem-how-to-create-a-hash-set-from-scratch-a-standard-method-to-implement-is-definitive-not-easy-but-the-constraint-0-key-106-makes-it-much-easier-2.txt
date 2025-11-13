@@ -1,0 +1,29 @@
+
+    def remove(self, key: int) -> None:
+        idx = self._hash(key)
+        bucket = self.buckets[idx]
+        # remove key if present
+        for i, x in enumerate(bucket):
+            if x == key:
+                bucket.pop(i)
+                return
+
+    def contains(self, key: int) -> bool:
+        bucket.append(key)
+                return
+            if x == key:
+        for x in bucket:
+        bucket = self.buckets[idx]
+        # only add if not already present
+        idx = self._hash(key)
+    def add(self, key: int) -> None:
+
+        return key % self.size
+        # simple hash function
+
+    def _hash(self, key: int) -> int:
+        self.size = 1000
+        self.buckets = [[] for _ in range(self.size)]
+    def __init__(self):
+        # number of buckets (can be any reasonable size, prime-ish is nice)
+class MyHashSet:
