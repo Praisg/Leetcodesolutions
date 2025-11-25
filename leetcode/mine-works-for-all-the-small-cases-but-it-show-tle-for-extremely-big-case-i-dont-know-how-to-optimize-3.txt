@@ -1,0 +1,15 @@
+        """
+        for character in s
+        stack = [ab] b if b is stack [-1] = b if its equal we pop()
+        we continue
+        """
+        for char in s:
+        stack = []   
+            if stack and char == stack[-1]:
+                stack.pop()
+            else:
+        return "".join(stack)        
+
+        # return s   
+   
+                stack.append(char)
