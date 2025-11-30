@@ -1,0 +1,31 @@
+            temp_next = curr.next 
+            # Get the tail of the child list to link it back to temp_next
+            child_tail = curr.child
+            while child_tail.next:
+            # Save the node after curr, as this is where we reconnect later
+            # 2. Child found: Perform the splicing operation (preorder/DFS)
+                continue
+                curr = curr.next
+            if not curr.child:
+            # 1. Normal traversal: If no child, just move to the next node.
+        while curr:
+        
+        curr = head
+                child_tail = child_tail.next
+            # --- Perform Splice ---
+            # A. Connect curr to curr.child
+            curr.next = curr.child
+            curr.child.prev = curr
+            # B. Connect the tail of the child list to the saved next node
+            child_tail.next = temp_next
+            if temp_next:
+                temp_next.prev = child_tail   
+            # C. As required, set the child pointer to null
+            curr.child = None
+            return head
+        if not head:
+    def flatten(self, head: 'Optional[Node]') -> 'Optional[Node]':
+class Solution:
+            # Move curr to the next node (which is the start of the now-flattened child list)
+            curr = curr.next 
+        return head
