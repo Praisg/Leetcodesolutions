@@ -1,0 +1,26 @@
+    def removeDuplicates(self, s: str, k: int) -> str:
+        """
+        stack = []
+        append [character, count] 
+        if stack[-1][0] != character
+        stack[[d,1]]
+        stack[[d,1],[e,1]]
+        if char = stack[-1][0] we increment the value by 1
+        so we now have
+        stack at [-1][1] += 1
+        stack[[d,1],[e,2]]
+        then if at any point we have stack[-1][1] == k
+        pop the top part k
+class Solution:
+        return charcaters * count 
+        """
+        stack = []
+
+        for char in s:
+            if stack and stack[-1][0] == char:
+                stack[-1][1] += 1
+            else:
+                stack.append([char,1])
+            if stack[-1][1] == k:
+                stack.pop()
+        return "".join([ch * count for ch , count in stack])
