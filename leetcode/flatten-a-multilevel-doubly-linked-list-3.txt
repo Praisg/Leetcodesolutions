@@ -1,0 +1,30 @@
+    def flatten(self, head: 'Optional[Node]') -> 'Optional[Node]':
+        #use bfs/preorder 
+        """
+        initilize a stack and put a head
+        create a dummy node 
+
+        so we want to have a prev following a tranversing node so the prev.next = trans and 
+        we keep track of prev as trans.prev = prev
+        """
+        if not head:
+            return head
+        prev = dummy = Node(None)
+
+        stack = [head]
+        while stack:
+            trav = stack.pop()
+
+            prev.next = trav
+            trav.prev = prev
+
+            if trav.next :
+                stack.append(trav.next)
+            if trav.child:
+                stack.append(trav.child)
+                trav.child = None
+            prev = trav
+
+        dummy.next.prev = None
+        return dummy.next                
+
