@@ -1,0 +1,13 @@
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        p = 0
+
+        for index, item in enumerate(nums):
+            if item != 0:
+
+        
+                nums[p], nums[index] = nums[index], nums[p]
+                p += 1
