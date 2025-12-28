@@ -1,0 +1,7 @@
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        """
+        we can use split and add to an array and reverse it
+        """
+        S = s.split()
+        return " ".join(S[::-1])
