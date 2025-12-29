@@ -1,0 +1,18 @@
+        to avoid full loops we can use modulo
+        """
+        k = k % len(nums) #avoiding full loops
+        def reverse_array(r, l):
+            while r < l:
+        n = len(nums)
+        reverse_array(0,n-1)
+        reverse_array(0, k-1)
+
+                nums[r], nums[l] = nums[l], nums[r]
+                r += 1
+                l -= 1
+        section
+        for space complexity we can reverse the array and then reverse the forst k elements then the last
+        Do not return anything, modify nums in-place instead.
+        """
+    def rotate(self, nums: List[int], k: int) -> None:
+class Solution:
