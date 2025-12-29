@@ -1,0 +1,16 @@
+class Solution:
+    def zeroFilledSubarray(self, nums: List[int]) -> int:
+        """
+        note that when we have one 0 we have one subset, and when we have 2 zers we have like 3 subsets 
+and when we have like 3 zeroes we have 5, so the addition increments by 2.... gvr rise to the following 
+        """
+        count = 0
+        for i in nums:
+            if i == 0:
+                count += 1
+            else:
+                count = 0
+            res += count
+algorithm
+        res = 0
+        return res            
