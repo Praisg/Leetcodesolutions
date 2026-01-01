@@ -1,0 +1,18 @@
+class Solution:
+    def removeDuplicateLetters(self, s: str) -> str:
+        hmap = {char : index for index, char in enumerate(s)} # {b:3, c:4, a:2} note that the dictionary appends the last index
+        stack = []
+        seen = set()
+
+        for index, char in enumerate(s):
+            if char in seen:
+                continue
+            while stack and char < stack[-1] and index < hmap[stack[-1]]: # as long as a is true we will remove c and then b 
+before appending a
+                seen.remove(stack.pop())
+            stack.append(char)
+            seen.add(char)    
+        return "".join(stack)    
+
+
+        
