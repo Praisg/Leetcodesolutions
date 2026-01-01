@@ -1,0 +1,22 @@
+
+        # d = defaultdict(list)
+        # #count = [0]*26 shudnt be here it will accummulate the words
+
+        # for word in strs:
+        #     count = [0]*26 # shud be here to continue reseting
+        #     for ch in word:
+        #         count[ord(ch)-ord('a')] += 1 #use this as a key
+        #     d[tuple(count)].append(word) # note here we cannot use the count list as a key turn 
+it into a tuple (immutable)
+        # return list(d.values())  
+
+        d = defaultdict(list)
+        #count = [0]*26 shudnt be here it will accummulate the words
+
+        for word in strs:
+            d[tuple(sorted(word))].append(word) # note here we cannot use the count list as a key 
+turn it into a tuple (immutable)
+        return list(d.values())       
+        
+
+
