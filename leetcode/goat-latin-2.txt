@@ -1,0 +1,19 @@
+        split into array word= [The, quick, brown, fox, jumped, over, the, lazy, dog]
+        for i in range(len(word)) 
+        w[0] in seen we add ma at the end of w+ ma, a + (i+1)
+        retrn "join .word
+        """
+
+        seen = {'a', 'e', 'i', 'o', 'u'}
+
+        word = sentence.split()
+
+        for i in range(len(word)):
+            if word[i][0].lower() in seen:
+                word[i] = word[i] + "ma" + "a"*(i+1)
+            else:
+                word[i] = word[i][1:] + word[i][0] + "ma" + "a"*(i+1)
+        return " ".join(word)        
+        seen = ('a', 'e', 'i', 'o', 'u')
+        """
+    def toGoatLatin(self, sentence: str) -> str:
