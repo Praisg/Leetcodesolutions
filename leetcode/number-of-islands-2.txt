@@ -1,0 +1,26 @@
+
+        m = len(grid[0])
+        n = len(grid)
+        """
+that to a zero so that we dont come back to it and then we iterate 
+        the idea is to do a dfs thru each position, so when we see a psotion right we turn 
+        def dfs(i, j):
+            #here we check constrains
+        """
+            if i < 0 or i >= n or j < 0 or j >= m or grid[i][j] !="1":
+                return
+            else:    
+                grid[i][j] = "0"
+
+                dfs(i, j+1)
+                dfs(i+1, j)
+                dfs(i-1, j)
+                dfs(i, j-1)
+
+        count = 0
+        for i in range(n):
+            for j in range(m):
+                if grid[i][j] == "1":
+                    count += 1
+                    dfs(i, j)    
+        return count
